@@ -83,7 +83,7 @@ class JcpenneySpiderSpider(scrapy.Spider):
 
                     product_rating = product.get('averageRating', '')
                     product_review_count = product.get('reviewCount', '')
-
+                    brand = product.get('brand', '')
                     product_price = product.get('currentMin', '')
                     original_price = product.get('originalMin', '')
                     discount = product.get('maxSavePrice', '')
@@ -119,6 +119,7 @@ class JcpenneySpiderSpider(scrapy.Spider):
                             'product_url': full_url,
                             'product_rating': product_rating,
                             'product_review_count': product_review_count,
+                            'brand': brand,
                             'product_price': product_price,
                             'original_price': original_price,
                             'discount': discount
@@ -139,6 +140,7 @@ class JcpenneySpiderSpider(scrapy.Spider):
             # Extract basic metadata
             item['url'] = response.meta.get('product_url','')
             item['product_name'] = response.meta.get('product_name')
+            item['brand'] = response.meta.get('brand', '')
             item['current_price'] = response.meta.get('product_price', '')
             item['original_price'] = response.meta.get('original_price', '')
             item['discount'] = response.meta.get('discount', '')

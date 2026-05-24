@@ -12,6 +12,7 @@ class JcpenneyScraperItem(scrapy.Item):
     url = scrapy.Field()
     product_name = scrapy.Field()
     current_price = scrapy.Field()
+    brand = scrapy.Field()
     original_price = scrapy.Field()
     discount = scrapy.Field()
     features = scrapy.Field()

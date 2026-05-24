@@ -95,17 +95,18 @@ Each extracted product URL is visited individually.
 
 The scraper extracts:
 
+- url
 - Product Name
 - Current Price
 - Original Price
 - Discount
-- Features / Specifications
-- Bullet Descriptions
+- Features
+- Descriptions
 - Image URLs
 - Ratings
 - Review Count
-- Available Sizes
-- Available Colors
+- Sizes
+- Colors
 
 Extraction includes:
 
